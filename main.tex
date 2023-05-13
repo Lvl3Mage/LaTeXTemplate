@@ -1,0 +1,87 @@
+\documentclass[a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel} \usepackage{hyperref} 
+\usepackage{float}
+\usepackage{amsmath} \usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes} \usepackage{tikz}
+\usepackage{pdfpages} \usepackage{listings}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=cyan,
+    filecolor=magenta,
+    urlcolor=cyan,
+    pdftitle={deadSet},
+    pdfpagemode=FullScreen,
+}
+\providecommand{\keywords}[1]
+{
+  \small	
+  \textbf{\textit{Keywords---}} #1
+}
+
+\title {
+
+	\Huge{"Name": Description}\\[1cm]
+	\author {\normalsize \Large{Karl Kalantarov}\\[1cm]}
+ \Large{VJ**** - Subject name}
+	\begin{figure}[H]
+		\centering
+			\includegraphics[width = 10cm]{media/uji-logo.jpg}
+	\end{figure}
+}
+
+
+
+\date {
+	\color{black} January 11, 1969
+}
+
+
+\begin{document} 
+
+% \hrule\\[2cm]
+
+\maketitle
+\setcounter{tocdepth}{4}
+\thispagestyle{empty}
+\clearpage
+\abstract
+Abstract Goes Here. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat.\\[0.5cm]
+\footnote{Footnote example\cite{example-item}}
+
+
+\keywords{Keywords go here}
+
+\clearpage
+\tableofcontents
+
+\clearpage
+\listoffigures
+
+\clearpage
+
+\section{Section example}
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\ref{fig:example-fig} %Example reference
+
+\subsection{Figure example}
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=0.8\textwidth]{media/uji-logo.jpg}
+	\caption{Example figure}
+	\label{fig:example-fig}
+\end{figure}
+
+\include{bibliography.tex}
+
+\end{document}
+
+
