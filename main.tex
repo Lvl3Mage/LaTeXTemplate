@@ -1,86 +1,103 @@
 \documentclass[a4paper]{article}
 \usepackage[utf8]{inputenc}
-\usepackage[english]{babel} \usepackage{hyperref} 
+\usepackage[english]{babel} \usepackage{hyperref}
 \usepackage{float}
 \usepackage{amsmath} \usepackage{graphicx}
 \usepackage[colorinlistoftodos]{todonotes} \usepackage{tikz}
 \usepackage{pdfpages} \usepackage{listings}
+\usepackage{eso-pic}
+\usepackage{fontspec} % Add this line
+\usepackage{a4wide}
+\usepackage{parskip}
+\usepackage[normalem]{ulem}
+\useunder{\uline}{\ul}{}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{svg}
+\usepackage{xcolor}
 
+
+\setmainfont{IBM Plex Sans} % Set your custom font here
+
+%\definecolor{fruitOrange}{HTML}{e38c29}
+%\definecolor{mutedOrange}{HTML}{3d3226}
+%\definecolor{urlPurple}{HTML}{3843ba}
 \hypersetup{
-    colorlinks=true,
-    linkcolor=cyan,
-    filecolor=magenta,
-    urlcolor=cyan,
-    pdftitle={Doc - KarlKalantarov},
-    pdfpagemode=FullScreen,
+	colorlinks=true,
+	linkcolor=blue,
+	filecolor=pink,
+	urlcolor=blue,
+	pdftitle={Document Title},
+	pdfpagemode=FullScreen,
+%Remove pdf link border
+	pdfborder={0 0 0},
+
 }
+
+
 \providecommand{\keywords}[1]
 {
-  \small	
-  \textbf{\textit{Keywords---}} #1
+	\small
+	\textbf{\textit{Keywords---}} #1
 }
-
+% Bg image
+%\newcommand\BackgroundPic{%
+%	\put(0,0){%
+%		\parbox[b][\paperheight]{\paperwidth}{%
+%
+%
+%			\vfill
+%			\centering
+%			\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{media/bgImage}%
+%			\vfill
+%		}}}
 \title {
 
-	\Huge{"Name": Description}\\[1cm]
+	\Huge{Document Title}\\[1cm]
+	\Large{Subtitle}\\[1cm]
 	\author {\normalsize \Large{Karl Kalantarov}\\[1cm]}
- \Large{VJ**** - Subject name}
+	\Large{VJsubjetCode - subjectName}
 	\begin{figure}[H]
-		\centering
-			\includegraphics[width = 10cm]{media/uji-logo.jpg}
+	\centering
+	\includegraphics[width = 9cm]{media/uji-logo}\label{fig:figure}
 	\end{figure}
 }
 
 
 
+
 \date {
-	\color{black} January 11, 1969
+	\color{black}
+	\today\\[1cm]
 }
 
 
-\begin{document} 
+\begin{document}
+
+
+	% better table spacing
+	\renewcommand{\arraystretch}{1.5}
+
+%	BG image
+%   \AddToShipoutPicture{\BackgroundPic}
 
 % \hrule\\[2cm]
 
-\maketitle
-\setcounter{tocdepth}{4}
-\thispagestyle{empty}
-\clearpage
-\abstract
-Abstract Goes Here. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat.\\[0.5cm]
-\footnote{Footnote example\cite{example-item}}
+	\maketitle
+	\setcounter{tocdepth}{4}
+	\thispagestyle{empty}
+	\clearpage
 
+	{
+		\hypersetup{linkcolor=black}
+		\tableofcontents
+		\clearpage
+		\listoffigures
 
-\keywords{Keywords go here}
-
-\clearpage
-\tableofcontents
-
-\clearpage
-\listoffigures
-
-\clearpage
-
-\section{Section example}
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\ref{fig:example-fig} %Example reference
-
-\subsection{Figure example}
-\begin{figure}[H]
-	\centering
-		\includegraphics[width=0.8\textwidth]{media/uji-logo.jpg}
-	\caption{Example figure}
-	\label{fig:example-fig}
-\end{figure}
-
-\include{bibliography.tex}
+		\clearpage
+	}
+	
+	\include{bibliography}
 
 \end{document}
 
